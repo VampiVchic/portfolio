@@ -1,0 +1,3528 @@
+@import "fonts.css";
+@import "reset.css";
+@import "global.css";
+
+@import "header.css";
+@import "footer.css";
+
+/* =================================main start================================= */
+.main__title__text {
+    font-weight: 600;
+    font-size: 198px;
+    line-height: 194px;
+    color: #fff;
+    padding-top: 76px;
+}
+
+.text-within {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    transform: translate(-6.5%, -138%);
+    font-family: "Oswald", sans-serif;
+    position: relative;
+    font-weight: 100;
+    font-size: 370px;
+    -webkit-text-stroke: .5px #fff;
+    color: transparent;
+}
+
+/* ================================================================================= */
+
+.img__intro {
+    position: relative;
+    top: -249px;
+    /* ← сдвигаем вверх */
+    width: 100%;
+    height: 600px;
+    /* ← фиксированная высота */
+    background: url(../img/1.jpg) 100% 40% / cover no-repeat;
+    background-position: 100% 40%;
+    z-index: 1;
+}
+
+.img__intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/1.jpg) 100% 40% / cover no-repeat;
+    background-position: 100% 40%;
+    filter: grayscale(100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.arrow__intro {
+    position: absolute;
+    top: 494px;
+    /* ← отступ сверху */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 122px;
+    height: 122px;
+    background-color: var(--general-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10;
+    padding: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow__intro:hover {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Контейнер */
+.fitness__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    margin-top: -250px;
+    /* ← сдвигаем вверх */
+    /* Можно оставить для отступа сверху */
+    /* Можно добавить выравнивание по вертикали, если нужно */
+    /* align-items: center; */
+}
+
+/* Каждая ячейка */
+.fitness__cell {
+    flex: 1;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Можно оставить center или flex-start в зависимости от желаемого */
+    padding: 56px 56px 52px 67px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    height: 100%;
+    /* чтобы занимали всю высоту контейнера */
+    border-right: 2px solid #000;
+}
+
+/* Наведение на ячейку */
+.fitness__cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовок внутри ячейки */
+.fitness__title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #f47521;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Заголовок блока */
+.box__title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.2;
+    color: #141414;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Кнопка (ссылка) */
+.check__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.4375;
+    text-transform: uppercase;
+    color: #141414;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.fitness__traning {
+    font-family: "Archivo";
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #f47521;
+}
+
+/* Текст внутри кнопки */
+.check__box span {
+    flex: 1;
+    text-align: left;
+}
+
+/* SVG стрелки */
+.check__box svg {
+    width: 25px;
+    height: 25px;
+    stroke-width: 6;
+}
+
+/* ============================================================================== */
+
+/* Основной валидный стиль для контейнера */
+.protein {
+    padding: 40px 0;
+    background: #141414;
+}
+
+/* Внутри секции - разделение на левую и правую части */
+.protein__inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-image: url(../img/svg/points.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Левая часть: текст */
+.protein__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* по вертикали по центру */
+}
+
+.protein__title {
+    font-family: "Oswald";
+    font-weight: 600;
+    font-size: 120px;
+    color: #fff;
+}
+
+.protein__title span {
+    color: #f47521;
+}
+
+.protein__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.protein__second__title {
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 30px;
+    color: #fff;
+}
+
+.protein__text {
+    font-family: "Archivo";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6875;
+    color: #979797;
+    text-transform: none;
+}
+
+.protein__button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    border-left: 4px solid #fff;
+    padding: 23px 61px;
+    width: 213px;
+    height: 76px;
+    background: #f47521;
+    color: #fff;
+    font-size: 20px;
+}
+
+.images-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    max-width: 476px;
+    object-fit: cover;
+    position: relative;
+    z-index: 4;
+}
+
+/* Правый блок с изображениями */
+.protein__right {
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    /* вертикальный столбец */
+    align-items: center;
+    /* по центру */
+    gap: 40px;
+    margin-top: 20px;
+    padding-right: 5%;
+}
+
+/* Стиль для всех кнопок (точек) */
+.swiper-pagination button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #fff;
+    /* по умолчанию — белый */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Номер внутри */
+.slide-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 21px;
+    color: #fff;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    padding-bottom: 4px;
+}
+
+/* Неактивная точка — только белый кружок, без номера */
+.swiper-pagination button:not(.swiper-pagination-bullet-active):hover {
+    transform: scale(2.5);
+    background-color: #141414;
+    /* останется белым */
+    border-color: var(--general-text);
+    /* граница белая */
+}
+
+/* При наведении — показываем номер внутри активного или при hover неактивной */
+.swiper-pagination button:hover .slide-number,
+.swiper-pagination .swiper-pagination-bullet-active .slide-number {
+    opacity: 1;
+}
+
+/* Активная точка — всегда с номером внутри, черным */
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #141414;
+    /* белый фон */
+    border-color: var(--general-text);
+    transform: scale(2.5);
+    /* масштаб если нужно */
+}
+
+/* Внутри активной точки — номер отображается всегда */
+.swiper-pagination .swiper-pagination-bullet-active .slide-number {
+    opacity: 1;
+}
+
+/* =========================================================== */
+
+.slide-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.slide-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.elements__container {
+    position: absolute;
+    right: 76%;
+    top: 38%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.elements__container .compound:nth-child(2) {
+    content: '';
+    background-color: var(--general-text);
+}
+
+.compound {
+    font-family: "Oswald";
+    display: flex;
+    top: 10%;
+    left: 10%;
+    width: 180px;
+    height: 142px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #141414;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.compound__second {
+    font-family: "Archivo";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #141414;
+}
+
+.compound:nth-of-type(1) .compound__second {
+    color: var(--accent-color);
+}
+
+.potent {
+    position: absolute;
+    left: 60%;
+    top: 16.7%;
+    z-index: 6;
+}
+
+/* ============================================================================== */
+
+.run__line {
+    position: relative;
+    overflow: hidden;
+    height: 219px;
+    background-color: #fff;
+    padding-top: 42px;
+    padding-bottom: 211.6px;
+}
+
+.marquee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    /* или max-content, чтобы занять ширину содержимого */
+    animation: scroll-left 10s linear infinite;
+    /* Настройте время в зависимости от ширины */
+}
+
+/* Анимация: движется влево на длину равную ширине двух изображений */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+        /* сдвиг на половину ширины маерки, чтобы было бесшовно */
+    }
+}
+
+/* ============================================================================== */
+
+/* Основной контейнер */
+.cards {
+    overflow-x: hidden;
+    /* скрыть overflow, если вдруг */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+/* Обертка для карточек - флекс-заливка */
+.cards__wrapper {
+    display: flex;
+    justify-content: center;
+    /* по центру */
+}
+
+/* Одна карточка */
+.card {
+    display: flex;
+    flex-direction: column;
+    /* изображение сверху, подпись снизу */
+    align-items: center;
+    /* по центру */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Изображение внутри карточки */
+.cards__img img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+/* Стиль для надписи */
+.cards__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Текст под изображением */
+.cards__text {
+    width: 100%;
+    cursor: pointer;
+    font-family: "Archivo";
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.4375;
+    color: #141414;
+    padding: 10px 0;
+    text-decoration: none;
+    width: 639px;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: var(--accent-color);
+    border-right: 2px solid #000;
+    padding: 56px 56px 52px 67px;
+    flex: 1;
+    background-color: var(--accent-color);
+}
+
+/* Стиль для надписи */
+.cards__box span {
+    text-transform: uppercase;
+    color: #141414;
+    transition: color 0.3s;
+}
+
+.cards__box svg {
+    width: 25px;
+    height: 25px;
+    stroke-width: 6;
+}
+
+/* =====ХОВЕР ДЛЯ КАРТОЧЕК */
+/* ===== ОСНОВНЫЕ СТИЛИ ===== */
+.card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* ← важно для скрытия текста */
+}
+
+/* ===== ГРАДИЕНТ ===== */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(235, 152, 9, 0.414), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===== ТЕНЬ ===== */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(235, 152, 9, 0.3);
+    /* оранжевая тень */
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* ===== ТЕКСТ СНИЗУ ===== */
+.cards__text {
+    position: absolute;
+    bottom: -100%;
+    /* ← изначально скрыт */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--accent-color);
+    border-top: 2px solid #000;
+    transition: bottom 0.4s ease;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.card:hover .cards__text {
+    bottom: 0;
+    /* ← появляется снизу */
+}
+
+/* ============================================================================== */
+.programs-section {
+    background: #141414;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 200px;
+}
+
+.programs-points {
+    position: absolute;
+    top: 118px;
+    left: 114px;
+    width: 767px;
+    height: 767px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.programs-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 70px;
+    color: #fff;
+    padding-top: 102px;
+    position: relative;
+    z-index: 2;
+}
+
+.programs-subheading {
+    font-family: var(--second-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6875;
+    text-align: center;
+    color: #979797;
+    padding-top: 15px;
+    padding-bottom: 133px;
+    position: relative;
+    z-index: 2;
+    text-transform: none;
+}
+
+.programs-watermark {
+    position: absolute;
+    top: -372px;
+    right: -115px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 397px;
+    -webkit-text-stroke: .3px #fff;
+    color: transparent;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.programs-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.programs-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px;
+    margin-right: 77px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.programs-card:last-child {
+    margin-right: 0;
+}
+
+.programs-media {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.programs-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.programs-card img {
+    max-width: 374px;
+    max-height: 488px;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.programs-label {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: var(--general-text);
+    margin-top: 33px;
+    text-align: center;
+}
+
+.programs-title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 42px;
+    color: #fff;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+.programs-media::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 102, 0, 0.278);
+    transition: width 2s ease;
+    z-index: 3;
+    border-radius: 4px;
+}
+
+.programs-card:hover .programs-media::after {
+    width: 100%;
+}
+
+.programs-progress {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.programs-progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #ff6600;
+    border-radius: 20px;
+    transition: width 2s ease;
+}
+
+.programs-card:hover .programs-progress::after {
+    width: 100%;
+}
+
+
+/* ========================================================================================== */
+
+/* Обертка для полосы, чтобы скрывать переполнение */
+.intro__boxing__line {
+    background-color: var(--general-text);
+    overflow-x: hidden;
+    /* скрываем горизонтальный скролл для всей секции */
+}
+
+.orange__line {
+    width: 100%;
+    height: 108px;
+    background-color: var(--general-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    overflow: hidden;
+    transform-origin: center;
+}
+
+.orange__line:hover {
+    transform: scale(.9);
+}
+
+/* Элементы внутри */
+.orange__line>* {
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Текст */
+.orange__line .text {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4375;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #141414;
+    transition: transform 0.3s;
+    padding-right: 20px;
+}
+
+/* Стрелка */
+.orange__line .arrow {
+    width: 15px;
+    height: auto;
+    fill: #141414;
+    transition: transform 0.3s;
+}
+
+/* При наведении — увеличение текста и стрелки */
+.orange__line:hover .text,
+.orange__line:hover .arrow {
+    transform: scale(.92);
+}
+
+/* ================================================================================================== */
+
+/* Общее оформление контейнера */
+.container__boxing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+}
+
+/* Обертка для картинки */
+.image__block {
+    position: relative;
+    width: 50%;
+    /* ← занимает половину контейнера */
+    height: 832px;
+    overflow: hidden;
+}
+
+/* Первая картинка без эффекта */
+.image__block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Вторая картинка: эффект размытия и overlay */
+.effect__image {
+    position: relative;
+    width: 50%;
+    /* ← занимает половину контейнера */
+    height: 832px;
+}
+
+/* Размытие */
+/* ===== РАЗМЫТИЕ ===== */
+.effect__image .blurred {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    /* ← убираем grayscale */
+    z-index: 1;
+}
+
+/* Рыжий прозрачный фон поверх размытого изображения */
+/* ===== РЫЖИЙ ОВЕРЛЕЙ ===== */
+.effect__image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Контейнер для содержимого поверх overlay */
+.content__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(244, 117, 33, 0.281);
+    z-index: 3;
+}
+
+/* SVG-картинка */
+.svg__container {
+    margin-bottom: 50px;
+}
+
+/* Текст ниже SVG */
+.text__below__svg {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 55px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Оранжевая черточка */
+.line__boxing {
+    width: 83px;
+    height: 3px;
+    background: #f47521;
+    margin: 10px 0;
+    margin-bottom: 65px;
+}
+
+/* Дополнительный текст */
+.additional__text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.7;
+    text-transform: none;
+}
+
+.name_author {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: none;
+    text-align: center;
+    color: #fff;
+    opacity: 1;
+}
+
+/* Картинка, которую нужно поверх */
+.potent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* ===================================================================================== */
+
+/* Новые стили для табов и статистики — по макету */
+.tabs-section {
+    padding: 60px 0 0 0;
+    background-color: #f5f5f5;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    overflow-x: hidden;
+    /* скрываем горизонтальный скролл */
+}
+
+.tabs-section .container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.tabs-container {
+    width: 30%;
+}
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab {
+    position: relative;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 100px;
+    color: #141414;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+    line-height: 1.1;
+    z-index: 1;
+    /* чтобы текст был поверх круга */
+}
+
+/* Активный таб — чёрный текст + оранжевый круг */
+.tab.active {
+    opacity: 1;
+    color: #000;
+}
+
+.tab.active::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    /* регулируйте позицию под ваш дизайн */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 145px;
+    height: 145px;
+    background-color: var(--general-text);
+    /* используем переменную */
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+/* Ховер на неактивных табах — оранжевый круг слева */
+.tab:not(.active):hover {
+    opacity: 1;
+}
+
+.tab:not(.active)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    /* регулируйте позицию */
+    transform: translate(-50%, -50%) scale(0);
+    width: 145px;
+    height: 145px;
+    background-color: var(--general-text);
+    /* используем переменную */
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.tab:not(.active):hover::before {
+    transform: translate(-50%, -50%) scale(.9);
+}
+
+.content-container {
+    width: 70%;
+    padding-left: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 3s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+.content.active {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    overflow: visible;
+}
+
+.content h2 {
+    font-weight: 600;
+    font-size: 40px;
+    color: #141414;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.content .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6875;
+    color: #979797;
+    margin: 0 0 30px 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Статистика под табами */
+.stats-container {
+    display: flex;
+    width: 100%;
+    margin-top: 238px;
+    /* Добавляем box-sizing, чтобы padding не увеличивал ширину */
+    box-sizing: border-box;
+}
+
+.stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    transition: background-color 0.3s ease;
+    padding: 131px 0 161px 0;
+    /* Важно: чтобы padding не ломал flex-распределение */
+    box-sizing: border-box;
+}
+
+.stat-item:last-child {
+    border-right: none;
+    /* убираем правую границу у последнего */
+}
+
+.stat-item:hover {
+    background-color: #e0e0e0;
+    /* легкий ховер */
+}
+
+.stat-item h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+    text-align: center;
+    color: #141414;
+
+}
+
+.stat-item p {
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.35;
+    text-align: center;
+    color: #141414;
+    margin: 0;
+
+}
+
+/* =========================================================================================== */
+
+/* Секция с тренировками */
+.training__grid {
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    width: 100%;
+    max-width: 1920px;
+}
+
+.grid__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image__item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.image__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.4s ease;
+}
+
+.text__item {
+    background-color: #303030;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    position: relative;
+    /* чтобы SVG позиционировался внутри */
+    overflow: hidden;
+    /* скрываем точки за пределами ячейки */
+}
+
+.points__traning {
+    position: absolute;
+    top: 78%;
+    left: 72%;
+    transform: scale(1.8);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* за текстом, но перед фоном */
+    pointer-events: none;
+    /* чтобы не мешал кликам */
+}
+
+.text__item .training__label {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #F47521;
+    margin-bottom: 10px;
+}
+
+.text__item h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    color: #fff;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.text__item p {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6875;
+    color: #979797;
+    margin: 0 0 20px 0;
+    text-transform: none;
+}
+
+.text__item .read__more {
+    position: relative;
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4375;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.text__item .read__more::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 111px;
+    height: 2px;
+    background: #F47521;
+}
+
+.read__more:hover {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    /* ← плавность */
+}
+
+/* Ховер: при наведении на картинку — изменение цвета заголовка в связанной текстовой ячейке */
+/* Класс для активного заголовка */
+.image__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #F47521;
+    opacity: 0.8;
+    transition: width 0.4s ease;
+    z-index: 1;
+}
+
+/* Для 1-й строки (слева-направо) */
+.grid__container> :nth-child(1)::before,
+.grid__container> :nth-child(3)::before {
+    left: 0;
+    transform: translateX(0);
+}
+
+/* Для 2-й строки (справа-налево) */
+.grid__container> :nth-child(6)::before,
+.grid__container> :nth-child(8)::before {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+}
+
+.text__item h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    color: #fff;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.text__item:hover h3 {
+    color: #F47521;
+    transform: scale(0.95);
+}
+
+/* Класс для активного заголовка */
+.text__item--active h3 {
+    color: #F47521;
+    transform: scale(0.95);
+}
+
+.image__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--fill-direction, 0);
+    right: var(--fill-direction, auto);
+    width: var(--fill-width, 0);
+    height: 100%;
+    background: #f4752152;
+    opacity: 0.8;
+    transition: width 0.4s ease;
+    z-index: 1;
+}
+
+/* ============================================================================================= */
+/* Секция с расписанием */
+.timetable__section {
+    padding: 60px 0;
+    background-color: #141414;
+    position: relative;
+    /* Важно для z-index дочерних элементов */
+    overflow: hidden;
+    /* Обрезаем всё, что выходит за пределы секции */
+}
+
+.timetable__title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.timetable__tabs__container {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.timetable__tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: center;
+}
+
+.timetable__tab {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #979797;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.timetable__tab span {
+    position: relative;
+    z-index: 2;
+    /* Текст поверх круга */
+}
+
+.timetable__tab.active {
+    color: #fff;
+}
+
+.timetable__day {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #b5b5b5;
+}
+
+/* Круг при ховере и активном табе */
+.timetable__tab:hover::before,
+.timetable__tab.active::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    bottom: 19%;
+    transform: translateX(-50%);
+    width: 41px;
+    height: 41px;
+    background-color: #f47521;
+    border-radius: 50%;
+    z-index: 1;
+    /* круг между фоном и текстом */
+}
+
+.timetable__tab:not(.active):hover {
+    color: #fff;
+}
+
+.timetable__container {
+    overflow-x: auto;
+    padding: 20px;
+    border: 0 solid #303030;
+    max-width: 1200px;
+    /* Ограничиваем ширину */
+    margin: 0 auto;
+    /* Центрируем */
+    width: 100%;
+    /* Занимает всю ширину, но не больше max-width */
+}
+
+.timetable__table {
+    display: none;
+    background-color: #141414;
+    color: #fff;
+    width: 100%;
+}
+
+.timetable__table.active {
+    display: block;
+}
+
+/* Заголовок таблицы — без верхней границы */
+.timetable__header {
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 1fr);
+    gap: 0;
+    background-color: #141414;
+    border-bottom: 1px solid #303030;
+}
+
+.timetable__header>div {
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #979797;
+    /* Нет линии слева у первого столбца (время) */
+    border-left: none;
+    /* Центрируем текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Добавляем линию СПРАВА от каждого дня, кроме последнего */
+.timetable__header>div:not(:last-child) {
+    border-right: 1px solid #303030;
+}
+
+/* Ячейки времени и классов — без внешних границ, только внутренние */
+.timetable__grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 1fr);
+    grid-template-rows: repeat(5, 80px);
+    /* 5 строк по 80px */
+    gap: 0;
+    /* Убираем нижнюю границу у всей таблицы */
+}
+
+
+.timetable__grid>*:nth-child(-n+8) {
+    border-top: 1px solid #303030;
+}
+
+/* Объединение ячеек по вертикали */
+.span-2 {
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Время в таблице */
+.timetable__time__slot {
+    padding: 10px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #b5b5b5;
+    background-color: #141414;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Линия СПРАВА от времени */
+    border-right: 1px solid #303030;
+}
+
+/* Ячейки классов */
+.timetable__class__cell {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #141414;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Линия СПРАВА от каждого дня */
+    border-right: 1px solid #303030;
+}
+
+/* Текст тренера */
+.timetable__class__cell span {
+    font-size: 12px;
+    color: #979797;
+    margin-top: 5px;
+}
+
+/* Линии между ячейками — добавляем только где нужно */
+.timetable__grid>*:not(:nth-last-child(-n+8)) {
+    border-bottom: 1px solid #303030;
+}
+
+/* Убираем нижнюю линию у последней строки */
+.timetable__grid>*:nth-last-child(-n+8) {
+    border-bottom: none;
+}
+
+/* Убираем правую линию у последнего столбца (SUNDAY) — только для не-ALL TRAINING */
+.not-all-training .timetable__grid>*:nth-child(8n) {
+    border-right: none;
+}
+
+.timetable__tabs_points {
+    position: absolute;
+    top: 0;
+    right: 4.5%;
+    transform: scale(3.5);
+    width: 40px;
+    height: 100%;
+    pointer-events: none;
+    /* чтобы не мешал кликам */
+    z-index: 0;
+}
+
+.timetable__tabs_points img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .timetable__section {
+        padding: 40px 0;
+    }
+
+    .timetable__title {
+        font-size: 50px;
+    }
+
+    .timetable__tabs {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .timetable__tab {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+    .timetable__header,
+    .timetable__grid {
+        grid-template-columns: 1fr repeat(7, 1fr);
+    }
+
+    .timetable__time__slot,
+    .timetable__class__cell {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .timetable__time__slot {
+        font-size: 16px;
+    }
+
+    /* На мобильных — убираем вертикальные линии */
+    .timetable__time__slot,
+    .timetable__class__cell {
+        border-left: none;
+    }
+}
+
+/* ===== АФИГЕННЫЙ ХОВЕР ДЛЯ ЯЧЕЕК ТАБЛИЦЫ ===== */
+.timetable__class__cell,
+.timetable__time__slot {
+    position: relative;
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.timetable__class__cell::before,
+.timetable__time__slot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: -1;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.timetable__class__cell:hover,
+.timetable__time__slot:hover {
+    background: rgba(244, 117, 33, 0.1);
+    /* оранжевый полупрозрачный фон */
+    transform: scale(1.03);
+    /* лёгкое увеличение */
+    z-index: 2;
+}
+
+.timetable__class__cell:hover::before,
+.timetable__time__slot:hover::before {
+    border-color: #f47521;
+    /* оранжевая рамка */
+    opacity: 1;
+    animation: pulse-border 1s infinite alternate;
+    /* анимация пульсации */
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.05);
+        opacity: 0.6;
+    }
+}
+
+/* ===== АНИМАЦИЯ СМЕНЫ ТАБЛИЦ ===== */
+.timetable__table {
+    background-color: #141414;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.7s ease, opacity 0.7s ease;
+}
+
+.timetable__table:not(.active) {
+    display: block;
+    max-height: 0;
+    opacity: 0;
+}
+
+.timetable__table.active {
+    max-height: 1000px;
+    /* ← подбери высоту */
+    opacity: 1;
+}
+
+
+/* ========================================================================================= */
+/* ============= Секция: Пресс-видео (финальная) — под макет 1920x815 ============= */
+.press-video {
+    /* Без отступов сверху/снизу */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.press-video__container {
+    display: flex;
+    justify-content: center;
+    /* Центрируем содержимое по горизонтали */
+    width: 100%;
+    /* Занимает всю ширину */
+    max-width: 1920px;
+    /* Ограничиваем максимальную ширину под макет */
+    margin: 0 auto;
+    /* Центрируем сам контейнер по экрану */
+}
+
+.press-video__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    height: 815px;
+    /* Фиксированная высота */
+}
+
+.press-video__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    /* Центр кадра */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.press-video__image-wrapper:hover .press-video__image {
+    transform: scale(1.03);
+}
+
+.press-video__play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+.press-video__play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.12);
+}
+
+/* Скрываем модальное окно по умолчанию */
+.modal-overlay {
+    display: none;
+    /* Скрыто */
+}
+
+.modal-overlay.active {
+    display: flex;
+    /* Показываем как flex при активации */
+    position: fixed;
+    /* Зафиксированное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.video-modal {
+    position: relative;
+    background-color: #000;
+    /* Фон для видео */
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close-button:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+/* Убедимся, что SVG-кнопка кликабельна */
+.press-video__container {
+    position: relative;
+}
+
+.press-video__play-btn {
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Адаптив: уменьшаем высоту и размер кнопки */
+@media (max-width: 1024px) {
+    .press-video__image-wrapper {
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .press-video__container {
+        max-width: 768px;
+    }
+
+    .press-video__image-wrapper {
+        height: 500px;
+    }
+
+    .press-video__play-btn {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .press-video__container {
+        max-width: 480px;
+    }
+
+    .press-video__image-wrapper {
+        height: 400px;
+    }
+
+    .press-video__play-btn {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+/* =========================================================================================== */
+/* ===== Уникальный класс для секции с аккордеоном ===== */
+.section__fitness {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+}
+
+/* Блок фиксированного размера — 1200×967 px */
+.fitness__fullscreen__section {
+    width: 1200px;
+    height: 967px;
+    box-sizing: border-box;
+}
+
+.fitness__center__section {
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.fitness__center__title {
+    font-weight: 500;
+    font-size: 70px;
+    color: #141414;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.fitness__tabs__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* ← убираем gap, будем управлять отступами через margin/border */
+    flex-grow: 1;
+}
+
+.tab__item {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-bottom: -1px;
+}
+
+/* ===== Заголовок таба — паддинг 31px сверху и снизу ===== */
+.tab__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 31px 20px 31px 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+/* ✅ ЕДИНСТВЕННЫЙ ховер-кружок — ПЕРЕД названием, НО ПОД текстом */
+.tab__header:hover .tab__name::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    /* 59px / 2 = 29.5 → 30px — центрируем по горизонтали */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 59px;
+    height: 59px;
+    background-color: #FF7A00;
+    border-radius: 200px;
+    z-index: -1;
+}
+
+/* ✅ Текст — поверх кружка (обязательно!) */
+.tab__time,
+.tab__name,
+.arrow__placeholder {
+    position: relative;
+    z-index: 5;
+}
+
+.tab__time {
+    font-weight: 400;
+    font-size: 20px;
+    color: #141414;
+    margin-right: 20px;
+}
+
+/* ===== Отступ между временем и названием — 111px ===== */
+.tab__name {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 0.9;
+    color: #141414;
+    flex-grow: 1;
+    margin-left: 111px;
+    /* ✅ точное расстояние */
+    text-transform: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* Круг при ховере и активном табе */
+.tab__name::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    /* ← регулируйте позицию */
+    transform: translate(-50%, -50%) scale(0);
+    width: 59px;
+    height: 59px;
+    background-color: #FF7A00;
+    /* ← твой оранжевый */
+    border-radius: 50%;
+    z-index: -1;
+    /* ← под текстом */
+    transition: transform 0.3s ease;
+}
+
+/* При наведении — кружок появляется */
+.tab__name:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* При активном табе — кружок остаётся */
+.tab__item.active .tab__name::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.arrow__placeholder {
+    width: 20px;
+    height: 20px;
+    background: url('/img/svg/arrow.svg') center no-repeat;
+    background-size: contain;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+
+.tab__item.active .arrow__placeholder {
+    transform: rotate(90deg);
+}
+
+.tab__content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 20px;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    text-transform: none;
+}
+
+.tab__content p {
+    font-family: "Archivo", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.tab__item.active .tab__content {
+    max-height: 300px;
+    padding: 20px;
+}
+
+.tab__item.active .tab__header {
+    background-color: #f9f9f9;
+}
+
+
+
+/* =============== СЕКЦИЯ: MEET THE PROS =============== */
+.coaches-section {
+    background: #141414;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 200px;
+}
+
+/* === ТОЧКИ (svg) === */
+.coaches-points {
+    position: absolute;
+    top: 37%;
+    left: 61%;
+    width: 767px;
+    height: 767px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* === ЗАГОЛОВОК === */
+.coaches-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 70px;
+    color: #fff;
+    padding-top: 102px;
+    position: relative;
+    z-index: 2;
+}
+
+.coaches-subheading {
+    font-family: var(--second-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6875;
+    text-align: center;
+    color: #979797;
+    padding-top: 15px;
+    padding-bottom: 133px;
+    position: relative;
+    z-index: 2;
+    text-transform: none;
+}
+
+/* === ВОДЯНОЙ ЗНАК "WITHIN" === */
+.coaches-watermark {
+    position: absolute;
+    top: -40%;
+    right: 59%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 397px;
+    -webkit-text-stroke: 0.3px #fff;
+    color: transparent;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* === СЕТКА КАРТОЧЕК === */
+.coaches-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin-right: 0;
+    gap: 20px;
+}
+
+.coaches-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.coaches-card:last-child {
+    margin-right: 0;
+}
+
+/* === КОНТЕЙНЕР ФОТО === */
+.coaches-media {
+    position: relative;
+    width: 100%;
+    height: 488px;
+    overflow: hidden;
+}
+
+.coaches-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* === ИКОНКА TWITTER — ВСЕГДА ВИДНА, ССЫЛКА, ХОВЕР === */
+.coaches-media .twitter-link {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background: url('img/programs__types/twitter.svg') no-repeat center center;
+    background-size: contain;
+    border-radius: 50%;
+    background-color: #ff6600;
+    z-index: 4;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* делаем ссылкой */
+    cursor: pointer;
+}
+
+.coaches-media .twitter-link:hover {
+    transform: scale(1.1);
+}
+
+/* === HOVER-АНИМАЦИЯ ЗАЛИВКИ ФОТО === */
+.coaches-media::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 102, 0, 0.278);
+    transition: width 2s ease;
+    z-index: 3;
+}
+
+.coaches-card:hover .coaches-media::before {
+    width: 100%;
+}
+
+/* === ТЕКСТЫ === */
+.coaches-label {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: var(--general-text);
+    margin-top: 33px;
+    text-align: center;
+}
+
+.coaches-title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 42px;
+    color: #fff;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+/* === ПРОГРЕСС-БАР === */
+.coaches-progress {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.coaches-progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #ff6600;
+    border-radius: 20px;
+    transition: width 2s ease;
+}
+
+.coaches-card:hover .coaches-progress::after {
+    width: 100%;
+}
+
+/* ===== ИНДИВИДУАЛЬНЫЙ МАСШТАБ И КРОП ДЛЯ КАЖДОГО ФОТО ===== */
+
+/* Фото 1 — Sarah Anderson */
+.coaches-grid :nth-child(1) .coaches-media img {
+    object-position: 50% 40%;
+    transform: scale(1.2);
+    transform-origin: left;
+}
+
+/* Фото 2 — Mark Thompson */
+.coaches-grid :nth-child(2) .coaches-media img {
+    object-position: 50% 20%;
+    transform: scale(2.6);
+    transform-origin: 53% 35%;
+}
+
+/* Фото 3 — Jessica Roberts */
+.coaches-grid :nth-child(3) .coaches-media img {
+    object-position: 50% 0%;
+    transform: scale(1.75);
+    transform-origin: 46% 31%;
+}
+
+/* Фото 4 — Michael Johnson */
+.coaches-grid :nth-child(4) .coaches-media img {
+    object-position: 50% 30%;
+    transform: scale(1.9);
+    transform-origin: top;
+}
+
+/* ============================================================================= */
+.latest-blog {
+    display: flex;
+    align-items: flex-start;
+    padding: 159px 0 138px;
+    padding-left: 353px;
+    padding-right: 148px;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Левая колонка: заголовок + кнопка */
+.blog-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 343px;
+    /* ← 140px от заголовка до кнопки (вы сказали: "140 — вниз") */
+    width: max-content;
+}
+
+.blog-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    color: #141414;
+    line-height: 1;
+    width: 350px;
+    /* чтобы переносился на 2 строки */
+    word-wrap: break-word;
+    line-height: 1.4
+}
+
+.read-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    border-left: 4px solid #141414;
+    padding: 23px 55px;
+    width: 213px;
+    height: 76px;
+    background: #f47521;
+    color: white;
+    text-decoration: none;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: #e0691d;
+}
+
+/* Правая колонка: карточки */
+.blog-cards {
+    display: flex;
+    gap: 33px;
+    /* ← интервал между карточками */
+    margin-top: 25px;
+    /* ← заголовок "чуть выше" карточек — 25px подъём */
+}
+
+.blog-card {
+    width: 387px;
+    height: 645px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 452px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px 20px 20px;
+    /* ← уменьшите top padding, если нужно "поднять" текст */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.card-date {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: #8b8a8a;
+}
+
+.card-title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #141414;
+    line-height: 1.3;
+    margin: 0;
+    text-transform: none;
+}
+
+.title-divider {
+    width: 100%;
+    height: 2px;
+    background: #7c7c7c;
+    margin-top: 10px;
+}
+
+.blog-cards .blog-card:nth-child(3) .card-image {
+    width: 588px;
+    /* ← уменьшаем высоту */
+    transform-origin: left center;
+    /* ← масштаб из верха */
+    object-fit: cover;
+}
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+/* ================================================================================= */
+
+/* Мобильные (по умолчанию — базовые стили) */
+/* от 0px */
+
+/* ===== ГЛОБАЛЬНЫЕ СТИЛИ ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ===== АДАПТИВ: до 1440px — начинаем скрывать навигацию ===== */
+@media (max-width: 1440px) {
+    .header {
+        padding-top: 30px;
+    }
+
+    .nav-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav-list>li:not(:first-child):not(:last-child) {
+        display: none;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+
+    .white__line {
+        display: none;
+    }
+
+    .shop {
+        gap: 24px;
+    }
+
+    .header-logo svg {
+        width: 160px;
+        height: auto;
+    }
+
+
+    /* ===== КАРТОЧКИ ===== */
+    .cards__text {
+        padding: 48px 48px 44px 56px;
+    }
+
+    .cards__box span {
+        font-size: 16px;
+    }
+
+    .cards__box svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* ===== БЛОГ ===== */
+    .latest-blog {
+        padding: 120px 0 100px;
+        padding-left: 200px;
+        padding-right: 100px;
+    }
+
+    .blog-title {
+        font-size: 60px;
+        width: 300px;
+    }
+
+    .read-more-btn {
+        padding: 20px 40px;
+        width: 180px;
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .blog-cards {
+        gap: 25px;
+    }
+
+    .blog-card {
+        width: 320px;
+        height: 550px;
+    }
+
+    .card-image {
+        height: 380px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .arrow__intro {
+        display: none;
+    }
+
+    .second__container {
+        padding-left: 15px;
+    }
+
+    .protein__title {
+        font-size: 25px;
+    }
+
+    .protein__second__title {
+        font-size: 20px;
+    }
+
+    .protein__text {
+        font-size: 15px;
+    }
+
+
+    /* ===== АДАПТИВ: до 1440px — картинки в столбик ===== */
+    .container__boxing {
+        flex-direction: column;
+        /* ← теперь в столбик */
+        align-items: center;
+        /* ← центрируем по горизонтали */
+    }
+
+    .image__block {
+        width: 100%;
+        /* ← занимает всю ширину */
+        height: 500px;
+        /* ← уменьшаем высоту */
+    }
+
+    .effect__image .overlay,
+    .content__overlay {
+        width: 100%;
+        /* ← чтобы не вылезали за границы */
+        height: 500px;
+        /* ← та же высота */
+    }
+
+    /* ===== ПАТЕНТ ===== */
+    .potent {
+        /* position: static; */
+        /* ← не absolute */
+        /* transform: none; */
+        /* ← убираем трансформ */
+        /* margin: -20px 0; */
+        /* ← можно чуть поднять/опустить */
+        width: 10%;
+    }
+
+    .quotes {
+        width: 10%;
+    }
+
+    /* ===== ТЕКСТ ===== */
+    .text__below__svg {
+        font-size: 36px;
+        /* ← уменьшаем шрифт */
+    }
+
+    .svg__container {
+        margin-bottom: 30px;
+        /* ← уменьшаем отступ */
+    }
+
+    .line__boxing {
+        margin-bottom: 40px;
+        /* ← уменьшаем отступ */
+    }
+
+    .additional__text {
+        font-size: 16px;
+        /* ← уменьшаем шрифт */
+    }
+
+    .name_author {
+        font-size: 24px;
+        /* ← уменьшаем шрифт */
+    }
+
+    .tab {
+        font-size: 70px;
+    }
+
+    .coaches-card {
+        margin-right: 0px;
+    }
+
+    .coaches-grid {
+        gap: 20px;
+    }
+
+    .blog-cards {
+        flex-wrap: wrap;
+    }
+
+    .latest-blog {
+        padding-left: 20px;
+    }
+
+    .read-more-btn {
+        margin-bottom: 20px;
+    }
+
+
+
+
+}
+
+/* ===== АДАПТИВ: до 991px — основной брейкпоинт ===== */
+@media (max-width: 991px) {
+    .container {
+        max-width: none;
+        padding: 0 16px;
+    }
+
+    /* ===== БЛОК ФИТНЕСА ===== */
+    .fitness__wrapper {
+        flex-direction: column;
+    }
+
+    .fitness__cell {
+        width: 100%;
+        padding: 40px 32px 36px 40px;
+        border-right: none;
+        border-bottom: 2px solid #000;
+    }
+
+    .box__title {
+        font-size: 32px;
+    }
+
+    .fitness__traning {
+        font-size: 18px;
+    }
+
+    .check__box {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .check__box svg {
+        width: 20px;
+        height: 20px;
+        stroke-width: 4;
+    }
+
+    .protein__right {
+        display: none;
+    }
+
+    /* ===== КАРТОЧКИ ===== */
+    .cards__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .cards__text {
+        border-right: none;
+        border-bottom: 2px solid #000;
+        padding: 40px 32px 36px 40px;
+        width: 100%;
+    }
+
+    .cards__box span {
+        font-size: 18px;
+    }
+
+    .cards__box svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* ===== ФУТЕР ===== */
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .footer__column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .second__title {
+        font-size: 18px;
+    }
+
+    .title__tip__tree {
+        font-size: 32px;
+    }
+
+    .contact__link {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .social__link svg {
+        width: 24px;
+        height: 24px;
+        stroke-width: 2;
+    }
+
+    .location__item p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .footer__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 60px;
+    }
+
+    .upper__line {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .title__tip__tree {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .logo svg {
+        width: 150px;
+        height: auto;
+    }
+
+    /* ===== БЛОГ ===== */
+    .latest-blog {
+        padding: 80px 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 100px;
+    }
+
+    .blog-title {
+        font-size: 48px;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .read-more-btn {
+        width: 160px;
+        height: 50px;
+        padding: 16px 30px;
+        font-size: 12px;
+    }
+
+    .blog-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 0;
+    }
+
+    .blog-card {
+        max-width: 400px;
+        height: auto;
+    }
+
+    .card-image {
+        height: 250px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .tab {
+        font-size: 55px;
+    }
+
+    .training__grid .container__boxing {
+        padding: 0;
+    }
+
+    .grid__container {
+        display: flex;
+        flex-direction: column;
+        /* ← отступ между ячейками */
+    }
+
+    .grid__item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .image__item img,
+    .text__item {
+        width: 100%;
+        height: auto;
+    }
+
+    .image__item img {
+        object-fit: cover;
+        height: 300px;
+        /* ← уменьшаем высоту */
+    }
+
+    .text__item {
+        padding: 20px;
+        background-color: #141414;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .training__label {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 0 15px 0;
+    }
+
+    .read__more {
+        font-size: 14px;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+
+    .points__traning {
+        position: absolute;
+        top: 70%;
+        left: 70%;
+        transform: scale(1.5);
+        width: 50px;
+        height: 50px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+
+    .timetable__section {
+        padding: 40px 0;
+    }
+
+    .timetable__title {
+        font-size: 50px;
+    }
+
+    .timetable__tabs_points {
+        display: none;
+        /* ← скрываем паттерн */
+    }
+
+    .timetable__tabs {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .timetable__tab {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+    .timetable__header,
+    .timetable__grid {
+        grid-template-columns: 1fr repeat(7, 1fr);
+    }
+
+    .timetable__time__slot,
+    .timetable__class__cell {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .timetable__time__slot {
+        font-size: 16px;
+    }
+
+    .programs-media img {
+        padding-top: 40px;
+    }
+
+
+    /* цифры - статистика */
+
+    .stat-item {
+        padding: 49px;
+    }
+
+    .stat-item h3 {
+        font-size: 50px;
+    }
+
+    .stat-item p {
+        font-size: 15px;
+    }
+
+
+
+
+
+
+}
+
+/* ===== АДАПТИВ: до 808px — промежуточный брейкпоинт ===== */
+@media (max-width: 808px) {
+    .programs-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .programs-card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .programs-title {
+        font-size: 32px;
+    }
+
+    .programs-label {
+        font-size: 16px;
+    }
+
+    .programs-media-wrapper {
+        padding-bottom: 30px;
+    }
+
+    .stat-item {
+        padding: 18px;
+    }
+
+
+
+
+}
+
+/* ===== АДАПТИВ: до 768px — планшет ===== */
+@media (max-width: 768px) {
+    .programs-card {
+        padding-bottom: 40px;
+    }
+
+    .blog-card {
+        max-width: 350px;
+    }
+
+    .main__title__text {
+        font-size: 25vw;
+    }
+
+    .text-within {
+        font-size: 50vw;
+    }
+
+    .tab::before {
+        display: none;
+        /* ← скрываем кружок */
+    }
+
+
+    .timetable__header>div {
+        padding: 0px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 8px;
+        color: #979797;
+        border-left: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timetable__time__slot {
+        font-size: 8px;
+    }
+
+    .timetable__time__slot,
+    .timetable__class__cell {
+        padding: 0px;
+        font-size: 7px;
+    }
+
+    .timetable__class__cell span {
+        font-size: 7px;
+    }
+
+
+    /* Адаптируем основной контейнер */
+    .coaches-section {
+        padding-left: 10px;
+        /* Уменьшаем боковые отступы */
+        padding-right: 10px;
+        /* padding-top и padding-bottom можно оставить или тоже уменьшить */
+    }
+
+    /* Адаптируем заголовок и подзаголовок */
+    .coaches-heading {
+        font-size: clamp(2rem, 5vw, 4rem);
+        /* Пример responsive typography */
+        /* padding-top и padding-bottom можно уменьшить */
+    }
+
+    .coaches-subheading {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        /* Пример responsive typography */
+        /* padding-top и padding-bottom можно уменьшить */
+    }
+
+    /* Адаптируем водяной знак и точки (убеждаемся, что позиционирование корректно при изменении масштаба) */
+    .coaches-watermark {
+        /* top и right могут требовать пересмотра */
+        /* top: -30%; /* Пример изменения позиции */
+        /* right: 50%; /* Пример изменения позиции */
+        font-size: 200px;
+        /* Уменьшаем размер огромного текста */
+        /* width: 500px; /* Если width фиксирован, возможно, нужно уменьшить или сделать % */
+        /* height: 500px; /* Аналогично */
+    }
+
+    .coaches-points {
+        /* top и left могут требовать пересмотра */
+        /* top: 30%; /* Пример изменения позиции */
+        /* left: 55%; /* Пример изменения позиции */
+        width: 500px;
+        /* Уменьшаем размер SVG */
+        height: 500px;
+    }
+
+    /* Адаптируем сетку карточек */
+    .coaches-grid {
+        gap: 15px;
+        /* Уменьшаем расстояние между карточками */
+        /* padding-left и padding-right можно уменьшить */
+    }
+
+    /* Адаптируем каждую карточку */
+    .coaches-card {
+        /* width: calc((100% - 15px) / 2); /* Пример изменения ширины для 2 колонок */
+        margin-right: 0;
+        /* Убираем фиксированный margin-right */
+        margin-bottom: 20px;
+        /* Увеличиваем margin-bottom, если карточки теперь в 1 колонку */
+    }
+
+    /* Адаптируем содержимое карточки */
+    .coaches-media img {
+        max-width: 100%;
+        /* Убедимся, что изображение отзывчиво */
+        /* width и height, если фиксированы, лучше заменить на max-width/max-height */
+    }
+
+    .coaches-label {
+        font-size: 0.9rem;
+        /* Уменьшаем размер шрифта */
+        margin-top: 10px;
+        /* Уменьшаем отступ сверху */
+        margin-bottom: 5px;
+        /* Уменьшаем отступ снизу */
+    }
+
+    .coaches-title {
+        font-size: 1.4rem;
+        /* Уменьшаем размер шрифта */
+        margin-top: 5px;
+        /* Уменьшаем отступ сверху */
+        margin-bottom: 10px;
+        /* Уменьшаем отступ снизу */
+    }
+
+    .coaches-progress {
+        margin-top: 10px;
+        /* Уменьшаем отступ сверху */
+        /* Высоту и ширину фиксированную лучше избегать */
+    }
+
+
+}
+
+
+/* ===== АДАПТИВ: до 480px — iPhone SE ===== */
+@media (max-width: 480px) {
+
+
+    .content h2 {
+        font-size: 27px;
+    }
+
+    .content .text {
+        font-size: 10px;
+    }
+
+
+    .stat-item {
+        padding: 5px;
+    }
+
+    .stat-item h3 {
+        font-size: 30px;
+    }
+
+    .stat-item p {
+        font-size: 10px;
+    }
+
+    .image__item img {
+        height: 200px;
+        /* ← ещё уменьшаем */
+    }
+
+    .text__item {
+        padding: 15px;
+    }
+
+    .training__label {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .read__more {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .points__traning {
+        transform: scale(1.2);
+        width: 40px;
+        height: 40px;
+    }
+
+    .svg__container img {
+        transform: scale(0.35);
+    }
+
+    .image__block {
+        height: 300px;
+        /* ← ещё уменьшаем высоту */
+        width: 100%;
+    }
+
+    .effect__image .overlay,
+    .content__overlay {
+        height: 300px;
+        /* ← та же высота */
+        width: 100%;
+    }
+
+    /* ===== ТЕКСТ ===== */
+    .text__below__svg {
+        font-size: 16px;
+        /* ← уменьшаем шрифт */
+        line-height: 1.3;
+    }
+
+    .text__below__svg p {
+        margin: 0;
+    }
+
+    .svg__container {
+        margin-bottom: 20px;
+        /* ← уменьшаем отступ */
+    }
+
+    .line__boxing {
+        width: 60px;
+        /* ← уменьшаем длину линии */
+        height: 2px;
+        /* ← уменьшаем толщину */
+        margin-bottom: 30px;
+        /* ← уменьшаем отступ */
+    }
+
+    .additional__text {
+        font-size: 14px;
+        /* ← уменьшаем шрифт */
+        margin-bottom: 5px;
+        /* ← чуть отступаем */
+    }
+
+    .name_author {
+        font-size: 20px;
+        /* ← уменьшаем шрифт */
+    }
+
+    /* ===== ПАТЕНТ ===== */
+    .potent {
+        width: 60px;
+    }
+
+
+    .tab {
+        font-size: 25px;
+    }
+
+    .coaches-card {
+        width: 100%;
+        /* Карточки в 1 колонку */
+    }
+
+    .coaches-watermark {
+        font-size: 150px;
+        /* Ещё больше уменьшаем */
+    }
+
+    .coaches-points {
+        width: 350px;
+        /* Ещё больше уменьшаем */
+        height: 350px;
+    }
+
+    /* Дальнейшее уменьшение шрифтов и отступов */
+    .coaches-heading {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    .coaches-subheading {
+        font-size: 0.8rem;
+    }
+
+    .coaches-label {
+        font-size: 0.8rem;
+    }
+
+    .coaches-title {
+        font-size: 1.2rem;
+    }
+
+
+
+
+    /* ===== ФУТЕР ===== */
+    .footer__container {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .second__title {
+        font-size: 16px;
+    }
+
+    .title__tip__tree {
+        font-size: 28px;
+    }
+
+    .contact__link {
+        font-size: 28px;
+    }
+
+    .social__link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .location__item p {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .upper__line {
+        padding-top: 30px;
+    }
+
+    .logo svg {
+        width: 80px;
+    }
+
+
+    /* ===== КАРТОЧКИ ===== */
+    .card {
+        max-width: 100%;
+    }
+
+    .cards__text {
+        padding: 32px 24px 28px 32px;
+    }
+
+    .cards__box {
+        flex-direction: row;
+    }
+
+    .cards__box span {
+        font-size: 16px;
+        flex: 1;
+        text-align: left;
+    }
+
+    .cards__box svg {
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+    }
+
+    .programs-card {
+        padding-bottom: 40px;
+    }
+
+    /* ===== БЛОГ ===== */
+    .latest-blog {
+        padding: 60px 16px;
+    }
+
+    .blog-header {
+        gap: 60px;
+    }
+
+    .blog-title {
+        font-size: 36px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .read-more-btn {
+        width: 140px;
+        height: 45px;
+        padding: 12px 20px;
+        font-size: 10px;
+    }
+
+    .blog-cards {
+        gap: 20px;
+    }
+
+    .blog-card {
+        max-width: 100%;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-date {
+        font-size: 14px;
+    }
+
+    .img__intro {
+        position: relative;
+        top: -244px;
+        width: 100%;
+        height: 289px;
+        background: url(../img/1.jpg) 43% 60% / cover no-repeat;
+        background-position: 100% 40%;
+        z-index: 1;
+    }
+
+    .fitness__wrapper {
+        margin-top: -264px;
+    }
+
+
+    .content-container {
+        font-size: 16px;
+        padding-left: 0px;
+    }
+
+
+    .timetable__header>div {
+        font-size: 5px;
+    }
+
+    .timetable__time__slot {
+        font-size: 5px;
+    }
+
+    .timetable__time__slot,
+    .timetable__class__cell {
+        padding: 0px;
+        font-size: 5px;
+    }
+
+    .timetable__class__cell span {
+        font-size: 4px;
+    }
+}
+
+/* ===== АДАПТИВ: до 320px — iPhone 5 ===== */
+@media (max-width: 320px) {
+
+
+    .image__item img {
+        height: 150px;
+        /* ← минимальная высота */
+    }
+
+    .text__item {
+        padding: 10px;
+    }
+
+    .training__label {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .read__more {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+
+    .points__traning {
+        transform: scale(1.0);
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .content-container {
+        font-size: 16px;
+        padding-left: 0px;
+    }
+
+    .content .text {
+        font-size: 16px;
+
+    }
+
+    /* ===== КАРТОЧКИ ===== */
+    .cards__text {
+        padding: 24px 16px 20px 24px;
+    }
+
+    .cards__box span {
+        font-size: 14px;
+    }
+
+    .cards__box svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* ===== БЛОГ ===== */
+    .latest-blog {
+        padding: 40px 12px;
+    }
+
+    .blog-header {
+        gap: 40px;
+    }
+
+    .blog-title {
+        font-size: 28px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .read-more-btn {
+        width: 120px;
+        height: 40px;
+        padding: 10px 16px;
+        font-size: 9px;
+    }
+
+    .blog-card {
+        max-width: 100%;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-date {
+        font-size: 12px;
+    }
+}
+
+/* ===== ОСНОВНЫЕ СТИЛИ ===== */
+.programs-media-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: clamp(20px, 4vw, 40px);
+}
+
+.programs-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+}

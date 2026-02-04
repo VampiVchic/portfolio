@@ -1,0 +1,57 @@
+:root {
+    --font-family: "Oswald", sans-serif;
+    --second-family: "Archivo", sans-serif;
+    --general-text: #F47521;
+    --accent-text: #141414;
+    --general-bg: #000000;
+    --accent-color: #CECECE;
+    --transition: all .4s;
+    --border-radius: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5vw;
+}
+
+.body {
+    font-family: "Oswald", "Archivo";
+    line-height: 1.5;
+    color: var(--general-text);
+    background: var(--general-bg);
+    text-transform: uppercase;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1707px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.second__container {
+    /* max-width: 1460px; */
+    padding-left: 350px;
+}
+
+.title {
+    font-family: 'Oswald';
+    font-size: 74px;
+    line-height: 0.82;
+    color: var(--accent-text);
+}
+
+.white__line {
+    background: #fff;
+    color: #fff;
+    max-width: 1708px;
+    min-height: 1px;
+}

@@ -1,0 +1,260 @@
+.header {
+    padding-top: 47px;
+}
+
+.nav-list {
+    display: grid;
+    /* grid-template-columns: repeat(7, 1fr); */
+    grid-template-columns: 8fr .3fr .6fr .3fr .8fr 2.4fr 6fr;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+
+.nav {
+    font-family: "Archivo";
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+
+    position: relative;
+    transition: color 0.3s;
+}
+
+.shop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+}
+
+/* ===== Счётчик корзины ===== */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #F47521;
+    /* твой рыжий цвет */
+    color: white;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Позиционирование внутри ссылки */
+.shop a {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* ===============================ХОВЕР ЭФЕКТ============================ */
+
+.nav::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    background-color: #F47521;
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.nav:hover::before {
+    transform: translate(-50%, -50%) scale(4);
+}
+
+
+/* ===================== БУРГЕР-МЕНЮ (мобильное) ===================== */
+
+/* Кнопка бургера (по умолчанию скрыта) */
+.burger-icon {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.burger-icon span:nth-child(1) {
+    top: 6px;
+}
+
+.burger-icon span:nth-child(2) {
+    top: 15px;
+}
+
+.burger-icon span:nth-child(3) {
+    top: 24px;
+}
+
+/* Анимация: бургер → крестик */
+body.body--opened-menu .burger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+body.body--opened-menu .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+body.body--opened-menu .burger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+/* ===== Адаптив: мобильные (до 900px) ===== */
+@media (max-width: 1440px) {
+
+    /* Показываем бургер */
+    .burger-icon {
+        display: block;
+    }
+
+    /* Меняем grid: оставляем только логотип (1-й li) и .shop (последний li) */
+    .nav-list {
+        grid-template-columns: 1fr auto;
+        margin-bottom: 0;
+    }
+
+    /* Скрываем все пункты навигации между логотипом и .shop */
+    .nav-list>li:nth-child(n+2):nth-last-child(n+2) {
+        display: none;
+    }
+
+    /* Подстраиваем хедер под мобильный вид */
+    .header {
+        padding-top: 20px;
+    }
+
+    /* Скрываем линию под хедером */
+    .white__line {
+        display: none;
+    }
+}
+
+/* ===== Оверлей (затемнение) ===== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    /* тёмный, как в макетах */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: opacity 0.3s, visibility 0.3s;
+    cursor: pointer;
+}
+
+/* ===== Мобильное меню ===== */
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #141414;
+    color: #fff;
+    padding: 60px 20px 30px;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Открытое состояние */
+body.body--opened-menu .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.body--opened-menu .nav__mobile {
+    transform: translateX(0);
+}
+
+/* Запрет скролла при открытом меню */
+body.body--opened-menu {
+    overflow: hidden;
+}
+
+/* ===== Пункты меню (без заголовков, чисто ссылки) ===== */
+.nav__mobile .nav__link {
+    display: block;
+    font-family: "Archivo";
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav__mobile .nav__link:hover {
+    color: #F47521;
+}
+
+/* ===== HOVER ДЛЯ ИКОНОК В ХЕДЕРЕ ===== */
+
+/* Общий стиль для ссылок с иконками */
+.shop a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative;
+}
+
+/* Hover: увеличение иконки */
+.shop a:hover {
+    transform: scale(1.1);
+}
+
+/* Отдельный hover для SVG внутри ссылки */
+.shop a svg {
+    transition: fill 0.3s ease;
+    /* ← важно для плавности */
+}
+
+/* Плавное изменение цвета path при наведении */
+.shop a:hover path {
+    fill: #F47521;
+    transition: fill 0.3s ease;
+    /* ← плавность закраски */
+}
+
+/* ===== HOVER ДЛЯ СЧЁТЧИКА В КОРЗИНЕ ===== */
+.cart-count {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* При наведении на корзину — счётчик увеличивается */
+.shop a:hover .cart-count {
+    transform: scale(1.15);
+}

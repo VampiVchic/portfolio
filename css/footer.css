@@ -1,0 +1,187 @@
+.title__tip__tree {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 42px;
+    color: #fff;
+    text-transform: none;
+
+    position: relative;
+    transition: color 0.3s;
+}
+
+span.title__tip__tree::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%) scale(0);
+    width: 16px;
+    height: 16px;
+    background-color: #F47521;
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.title__tip__tree:hover::before {
+    transform: translate(-50%, -50%) scale(4);
+}
+
+.second__title {
+    font-family: "Archivo";
+    font-weight: 600;
+    font-size: 20px;
+    color: #a6a6a6;
+    color: var(--accent-color);
+    text-transform: none;
+}
+
+.upper__line {
+    padding-top: 63px;
+    padding-bottom: 51px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__contact {
+    padding-top: 103px;
+    display: grid;
+    grid-template-columns: 3fr .8fr 0.8fr;
+
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: 3fr .8fr .8fr;
+    gap: 166px;
+    padding-top: 100px;
+    padding-bottom: 142px;
+}
+
+.contact__link {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 42px;
+    color: #fff;
+    text-transform: none;
+}
+
+.contact__link:hover {
+    text-decoration: underline;
+    color: var(--general-text);
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+
+}
+
+.social__link svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transition: fill 0.3s;
+    margin-top: 24px;
+
+}
+
+.social__link svg:hover path {
+    fill: var(--general-text);
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.hours__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rootes {
+    background: #303030;
+    height: 88px;
+    text-transform: none;
+    color: #a6a6a6;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.9375;
+    color: #fff;
+    opacity: 0.6;
+    margin-bottom: 0;
+
+}
+
+.text__rootes {
+    padding-top: 28px;
+}
+
+/* ===== ПЛАВНОСТЬ ДЛЯ ВСЕХ HOVER-ЭФФЕКТОВ ===== */
+/* ===== БОЛЕЕ ЗАМЕТНАЯ ПЛАВНОСТЬ ДЛЯ ВСЕХ HOVER-ЭФФЕКТОВ ===== */
+
+/* Основной заголовок */
+.title__tip__tree {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 42px;
+    color: #fff;
+    text-transform: none;
+    position: relative;
+    transition: color 0.5s ease;
+    /* ← увеличили до 0.5s */
+}
+
+span.title__tip__tree::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%) scale(0);
+    width: 16px;
+    height: 16px;
+    background-color: #F47521;
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.5s ease;
+    /* ← увеличили до 0.5s */
+}
+
+.title__tip__tree:hover::before {
+    transform: translate(-50%, -50%) scale(4);
+}
+
+/* Ссылки в контактах */
+.contact__link {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 42px;
+    color: #fff;
+    text-transform: none;
+    transition: color 0.5s ease, text-decoration 0.5s ease;
+    /* ← увеличили до 0.5s */
+}
+
+.contact__link:hover {
+    text-decoration: underline;
+    color: var(--general-text);
+}
+
+/* Иконки соцсетей */
+.social__link svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    transition: fill 0.5s ease;
+    /* ← увеличили до 0.5s */
+    margin-top: 24px;
+}
+
+.social__link svg:hover path {
+    fill: var(--general-text);
+    transition: fill 0.5s ease, transform 0.5s ease;
+    /* ← увеличили до 0.5s */
+}
